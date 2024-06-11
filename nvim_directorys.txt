@@ -1,0 +1,29 @@
+~/.config/nvim
+    |
+    | - init.lua
+    |
+    | _ lua/
+        |
+        | - config/
+        |   |
+        |   | - options.lua
+        |   |
+        |   | - keymaps.lua
+        |   |
+        |   | _ lazy.lua
+        |
+        |
+        | _ plugins/
+            |
+            | - plug_spec_1.lua
+            |
+            ~~~~~~~~~~~~~~~~~~~
+            |
+            | _ plug_spec_n.lua
+
+
+idea_at_boot:
+    nvim -> nvim/init.lua -> nvim/lua/init.lua
+
+idea_at_boot_2:
+    nvim -> nvim/init.lua -> nvim/lua/config_1.lua ~ config_n.lua
