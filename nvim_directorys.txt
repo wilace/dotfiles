@@ -1,29 +1,102 @@
-~/.config/nvim
-    |
-    | - init.lua
-    |
-    | _ lua/
-        |
-        | - config/
-        |   |
-        |   | - options.lua
-        |   |
-        |   | - keymaps.lua
-        |   |
-        |   | _ lazy.lua
-        |
-        |
-        | _ plugins/
-            |
-            | - plug_spec_1.lua
-            |
-            ~~~~~~~~~~~~~~~~~~~
-            |
-            | _ plug_spec_n.lua
+idea_at_booting:
+    nvim -> nvim/init.lua -> nvim/lua/init.lua -> nvim/lua/config/options.lua ~ lazy.lua
+
+    [in 'nvim/init.lua']
+    require('lua')
 
 
-idea_at_boot:
-    nvim -> nvim/init.lua -> nvim/lua/init.lua
+    ~/.config/nvim
+        |
+        | - init.lua
+        |
+        | _ lua/
+            |
+            | - init.lua
+            |
+            | - config/
+            |   |
+            |   | - options.lua
+            |   |
+            |   | - keymaps.lua
+            |   |
+            |   | _ lazy.lua
+            |
+            |
+            | _ plugins/
+                |
+                | - plug_spec_1.lua
+                |
+                ~~~~~~~~~~~~~~~~~~~
+                |
+                | _ plug_spec_n.lua
 
-idea_at_boot_2:
-    nvim -> nvim/init.lua -> nvim/lua/config_1.lua ~ config_n.lua
+
+
+
+idea_at_booting_2:
+    nvim -> nvim/init.lua -> nvim/lua/config/init.lua -> nvim/lua/config/options.lua ~ lazy.lua
+
+    [in 'nvim/init.lua']
+    require('lua/config')
+
+
+    ~/.config/nvim
+        |
+        | - init.lua
+        |
+        | _ lua/
+            |
+            | - config/
+            |   |
+            |   | - init.lua
+            |   |
+            |   | - options.lua
+            |   |
+            |   | - keymaps.lua
+            |   |
+            |   | _ lazy.lua
+            |
+            |
+            | _ plugins/
+                |
+                | - plug_spec_1.lua
+                |
+                ~~~~~~~~~~~~~~~~~~~
+                |
+                | _ plug_spec_n.lua
+
+
+
+
+idea_at_booting_3:
+    nvim -> nvim/init.lua -> nvim/lua/config/options.lua ~ lazy.lua
+
+    [in 'nvim/init.lua']
+    require('lua/config/options')
+    require('lua/config/keymaps')
+    require('lua/config/lazy.lua')
+
+
+    ~/.config/nvim
+        |
+        | - init.lua
+        |
+        | _ lua/
+            |
+            | - config/
+            |   |
+            |   | - options.lua
+            |   |
+            |   | - keymaps.lua
+            |   |
+            |   | _ lazy.lua
+            |
+            |
+            | _ plugins/
+                |
+                | - plug_spec_1.lua
+                |
+                ~~~~~~~~~~~~~~~~~~~
+                |
+                | _ plug_spec_n.lua
+
