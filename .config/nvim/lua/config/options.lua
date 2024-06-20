@@ -11,7 +11,12 @@ function options.load_options()
         { 'shiftwidth', 0, {} },
         { 'expandtab', true, {} },
 
+        { 'ignorecase', true, {} },
+        { 'smartcase', true, {} },
+        { 'inccommand', 'split', {} },
+
         { 'number', true, { scope = 'local', win = 0 } },
+        { 'signcolumn', 'yes', { scope = 'local', win = 0 } },
         { 'scrolloff', 10, { scope = 'local', win = 0 } },
     }
 
@@ -33,6 +38,5 @@ return options
 
 --[[
     list of items to be set.
-
 ]]
 
