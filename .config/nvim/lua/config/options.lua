@@ -20,7 +20,6 @@ function M.load_options()
         { 'scrolloff', 10, { scope = 'local', win = 0 } },
     }
 
-
     local array_length = #options
     local nvim_set_option_value = vim.api.nvim_set_option_value
 
