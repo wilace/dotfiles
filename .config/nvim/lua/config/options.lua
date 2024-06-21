@@ -1,6 +1,6 @@
-local options = {}
+local M = {}
 
-function options.load_options()
+function M.load_options()
     local options = {
      -- { name, value, opts }
 
@@ -34,7 +34,7 @@ function options.load_options()
     end
 end
 
-return options
+return M
 
 --[[
     list of items to be set.

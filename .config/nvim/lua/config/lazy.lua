@@ -1,6 +1,6 @@
-local lazy = {}
+local M = {}
 
-lazy.load_lazy = function()
+function M.load_lazy()
     local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
 
     if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -37,4 +37,4 @@ lazy.load_lazy = function()
     })
 end
 
-return lazy
+return M

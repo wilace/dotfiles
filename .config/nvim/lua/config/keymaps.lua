@@ -1,6 +1,6 @@
-local keymaps = {}
+local M = {}
 
-keymaps.load_keymaps = function()
+function M.load_keymaps()
     local keymap_tables = {
      -- { mode, setting_key, executive_command, optional_arguments }
 
@@ -28,4 +28,4 @@ keymaps.load_keymaps = function()
     end
 end
 
-return keymaps
+return M
