@@ -1,5 +1,8 @@
 if vim.loader then
-  vim.loader.enable()
+    vim.loader.enable()
 end
 
-require('config')
+require('config/options')
+require('config/keymaps')
+require('config/autocmds')
+require('config/lazy')
