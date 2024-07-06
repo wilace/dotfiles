@@ -1,14 +1,14 @@
-local global_variables = {
-    { 'loaded_netrw', 1 },
-    { 'loaded_netrwPlugin', 1 },
-}
-global_variables[0] = 2
-
-local nvim_set_var = vim.api.nvim_set_var
-for i = 1, global_variables[0] do
-    local table = global_variables[i]
-    nvim_set_var(table[1], table[2])
-end
+-- local global_variables = {
+--     { 'loaded_netrw', 1 },
+--     { 'loaded_netrwPlugin', 1 },
+-- }
+-- global_variables[0] = 2
+--
+-- local nvim_set_var = vim.api.nvim_set_var
+-- for i = 1, global_variables[0] do
+--     local table = global_variables[i]
+--     nvim_set_var(table[1], table[2])
+-- end
 
 local opts = {}
 local option_tables = {
@@ -42,6 +42,7 @@ local option_tables = {
     { 'ignorecase', true, opts },
     { 'smartcase', true, opts },
     { 'inccommand', 'split', opts },
+    { 'incsearch', true, opts },
 
     { 'number', true, opts },
     { 'signcolumn', 'yes', opts },
