@@ -4,5 +4,6 @@ return {
         -- options
     },
 
-    lazy = false
+    lazy = false,
+    enabled = false,
 }
