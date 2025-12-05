@@ -1,0 +1,38 @@
+modmap:
+  - name: Global
+    remap:
+      CapsLock: Esc
+
+  - name: Wakasagi Layout
+    remap:
+      W: P
+      E: R
+      R: D
+      T: C
+      Y: B
+      U: K
+      I: U
+      O: Y
+      P: X
+
+      A: A
+      S: T
+      D: N
+      F: S
+      G: W
+      H: M
+      J: H
+      K: E
+      L: I
+      SemiColon: O
+
+      Z: Slash
+      X: Comma
+      C: L
+      V: G
+      B: J
+      N: F
+      M: V
+      Comma: SemiColon
+      Dot: Z
+      Slash: Dot

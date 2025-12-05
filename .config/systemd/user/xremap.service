@@ -1,0 +1,14 @@
+[Unit]
+Description=Xremap
+After=default.target
+
+[Service]
+# xremapのインストールディレクトリを確認すること
+ExecStart=%h/.cargo/bin/xremap --watch=device %h/.config/xremap/config.yaml
+Restart=always
+RestartSec=1
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
