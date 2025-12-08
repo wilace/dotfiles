@@ -1,0 +1,30 @@
+Checks: >
+  -*,
+
+  bugprone-*,
+  performance-*,
+  readability-*,
+  modernize-*,
+
+  cppcoreguidelines-avoid-goto,
+  cppcoreguidelines-init-variables,
+  cppcoreguidelines-avoid-magic-numbers,
+  cppcoreguidelines-narrowing-conversions,
+
+  misc-unused-using-decls
+
+  hicpp-no-assembler,
+  hicpp-signed-bitwise
+
+CheckOptions:
+  - { key: readability-identifier-naming.Enabled, value: false }
+  - { key: readability-magic-numbers.IgnoreEnums, value: true }
+  - { key: modernize-use-auto.RemoveStars, value: false }
+  - { key: modernize-use-trailing-return-type.MinimumTypeNameLength, value: 12 }
+
+WarningsAsErrors: ''       # 警告をエラー扱いにしない（開発時のストレス回避）
+FormatStyle:     none      # clang-format と混ざらないように無効化
+HeaderFilterRegex: '.*'    # プロジェクト全体をチェック
+
+AnalyzeTemporaryDtors: true
+User: clang-tidy
