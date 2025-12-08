@@ -1,0 +1,33 @@
+CompileFlags:
+  Add:
+    - -I./include/
+    - -I../include/
+
+    - -std=c++23
+
+    - -Wall
+    - -Wextra
+    - -Wpedantic
+    - -Wshadow
+    - -Wconversion
+    - -Wnull-dereference
+    - -Wdouble-promotion
+    - -Wformat=2
+    - -Wunused-parameter
+    - -Wunused-variable
+    - -Wunused-function
+
+    - -Wno-c++98-compat
+    - -Wno-c++98-compat-pedantic
+    - -Wno-padded
+    - -Wno-float-equal
+    - -Wno-unsafe-buffer-usage
+    - -Wno-reserved-identifier
+
+  Compiler: clang++
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
+  Designators: false
