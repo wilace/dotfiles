@@ -1,0 +1,45 @@
+{
+    "$comment": "エディタ設定",
+    "editor.fontSize": 24,
+    "editor.fontFamily": "'0xProto', 'IBM Plex Sans JP'",
+    "workbench.colorTheme": "Catppuccin Latte",
+    "workbench.iconTheme": "catppuccin-latte",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.minimap.enabled": false,
+
+
+    "$comment": "Clangd 本体の設定",
+    "clangd.arguments": [
+        "--enable-config",
+        "--clang-tidy",
+        "--clang-tidy-checks=*",
+        "--clang-tidy-fix",
+        "--completion-style=detailed",
+        "--header-insertion=iwyu",
+        "--pch-storage=memory",
+        "--background-index",
+        "--log=error",
+        "--offset-encoding=utf-16"
+    ],
+    "clangd.path": "clangd",
+
+
+    "$comment": "Inlay Hints（型ヒント）",
+    "editor.inlayHints.enabled": "on",
+    "editor.inlayHints.parameterNames.enabled": "literals",
+    "editor.inlayHints.parameterTypes.enabled": true,
+    "editor.inlayHints.variableTypes.enabled": true,
+    "editor.inlayHints.propertyDeclarationTypes.enabled": true,
+    "editor.inlayHints.functionLikeReturnTypes.enabled": true,
+
+
+    "$comment": "C/C++ 拡張は無効化（clangd と競合するため）",
+    "C_Cpp.intelliSenseEngine": "disabled",
+
+
+    "$comment": "フォーマッタ（clang-format）の設定",
+    "editor.formatOnSave": true,
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    }
+}
