@@ -22,9 +22,9 @@ CheckOptions:
   - { key: modernize-use-auto.RemoveStars, value: false }
   - { key: modernize-use-trailing-return-type.MinimumTypeNameLength, value: 12 }
 
-WarningsAsErrors: ''       # 警告をエラー扱いにしない（開発時のストレス回避）
-FormatStyle:     none      # clang-format と混ざらないように無効化
-HeaderFilterRegex: '.*'    # プロジェクト全体をチェック
+WarningsAsErrors: ''
+FormatStyle: none
+HeaderFilterRegex: '.*'
 
 AnalyzeTemporaryDtors: true
 User: clang-tidy
