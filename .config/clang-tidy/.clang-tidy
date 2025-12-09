@@ -1,18 +1,14 @@
 Checks: >
   -*,
-
   bugprone-*,
   performance-*,
   readability-*,
   modernize-*,
-
   cppcoreguidelines-avoid-goto,
   cppcoreguidelines-init-variables,
   cppcoreguidelines-avoid-magic-numbers,
   cppcoreguidelines-narrowing-conversions,
-
-  misc-unused-using-decls
-
+  misc-unused-using-decls,
   hicpp-no-assembler,
   hicpp-signed-bitwise
 
@@ -23,8 +19,7 @@ CheckOptions:
   - { key: modernize-use-trailing-return-type.MinimumTypeNameLength, value: 12 }
 
 WarningsAsErrors: ''
-FormatStyle: none
+FormatStyle: file
 HeaderFilterRegex: '.*'
 
-AnalyzeTemporaryDtors: true
 User: clang-tidy
