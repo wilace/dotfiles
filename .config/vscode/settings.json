@@ -1,12 +1,13 @@
 {
     "$comment": "エディタ設定",
         "editor.fontSize": 24,
-        "terminal.integrated.fontSize": 24,
-
+        "terminal.integrated.fontSize": 20,
         "editor.fontFamily": "'0xProto Nerd Font', 'IBM Plex Sans JP'",
+
         "workbench.colorTheme": "Catppuccin Latte",
         "workbench.iconTheme": "catppuccin-latte",
 
+        "workbench.sideBar.location": "right",
         "editor.wordWrap": "wordWrapColumn",
         "editor.minimap.enabled": false,
 
@@ -35,12 +36,12 @@
         ],
         "clangd.path": "clangd",
         "clangd.checkUpdates": false,
+        "clangd.onConfigChanged": "restart",
 
         "editor.semanticHighlighting.enabled": true,
         "clangd.semanticHighlighting": true,
 
         "clang-format.detectStyle": false,
-        "clangd.onConfigChanged": "restart",
 
 
     "$comment": "Inlay Hints（型ヒント）",
