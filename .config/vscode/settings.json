@@ -1,46 +1,81 @@
 {
     "$comment": "エディタ設定",
-    "editor.fontSize": 24,
-    "editor.fontFamily": "'0xProto', 'IBM Plex Sans JP'",
-    "workbench.colorTheme": "Catppuccin Latte",
-    "workbench.iconTheme": "catppuccin-latte",
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.minimap.enabled": false,
-    "disable-hardware-acceleration": true,
+        "editor.fontSize": 24,
+        "terminal.integrated.fontSize": 24,
+
+        "editor.fontFamily": "'0xProto Nerd Font', 'IBM Plex Sans JP'",
+        "workbench.colorTheme": "Catppuccin Latte",
+        "workbench.iconTheme": "catppuccin-latte",
+
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.minimap.enabled": false,
+
+        "editor.largeFileOptimizations": true,
+        "editor.maxTokenizationLineLength": 5000,
+
+        "chat.disableAIFeatures": true,
 
 
     "$comment": "Clangd 本体の設定",
-    "clangd.arguments": [
-        "--enable-config",
-        "--clang-tidy",
-        "--clang-tidy-checks=*",
-        "--clang-tidy-fix",
-        "--completion-style=detailed",
-        "--header-insertion=iwyu",
-        "--pch-storage=memory",
-        "--background-index",
-        "--log=error",
-        "--offset-encoding=utf-16"
-    ],
-    "clangd.path": "clangd",
+        "clangd.arguments": [
+            "--enable-config",
+            "--clang-tidy",
+            "--clang-tidy-fix",
+            "--completion-style=detailed",
+            "--header-insertion-decorators",
+            "--header-insertion=iwyu",
+            "--pch-storage=memory",
+            "--background-index",
+            "--background-index-priority=normal",
+            "--index=auto",
+            "--log=error",
+            "--offset-encoding=utf-16",
+            "--pretty",
+            "--limit-results=500"
+        ],
+        "clangd.path": "clangd",
+        "clangd.checkUpdates": false,
+
+        "editor.semanticHighlighting.enabled": true,
+        "clangd.semanticHighlighting": true,
+
+        "clang-format.detectStyle": false,
+        "clangd.onConfigChanged": "restart",
 
 
     "$comment": "Inlay Hints（型ヒント）",
-    "editor.inlayHints.enabled": "on",
-    "editor.inlayHints.parameterNames.enabled": "literals",
-    "editor.inlayHints.parameterTypes.enabled": true,
-    "editor.inlayHints.variableTypes.enabled": true,
-    "editor.inlayHints.propertyDeclarationTypes.enabled": true,
-    "editor.inlayHints.functionLikeReturnTypes.enabled": true,
+        "editor.inlayHints.enabled": "on",
+        "editor.inlayHints.parameterNames.enabled": "literals",
+        "editor.inlayHints.parameterTypes.enabled": true,
+        "editor.inlayHints.variableTypes.enabled": true,
+        "editor.inlayHints.propertyDeclarationTypes.enabled": true,
+        "editor.inlayHints.functionLikeReturnTypes.enabled": true,
 
 
     "$comment": "C/C++ 拡張は無効化（clangd と競合するため）",
-    "C_Cpp.intelliSenseEngine": "disabled",
+        "C_Cpp.intelliSenseEngine": "disabled",
 
 
     "$comment": "フォーマッタ（clang-format）の設定",
-    "editor.formatOnSave": true,
-    "[cpp]": {
-        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
-    }
+        "editor.formatOnSave": true,
+        "[cpp]": {
+            "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+            "editor.formatOnType": false
+        },
+
+
+    "$comment": "build/の中の中間ファイル読み込みを避ける",
+        "files.watcherExclude": {
+            "**/build/**": true,
+            "**/.cache/**": true,
+            "**/out/**": true,
+
+            "**/.git/objects/**": true,
+            "**/.git/subtree-cache/**": true
+        },
+        "search.exclude": {
+            "**/build/**": true,
+            "**/.cache/**": true,
+            "**/out/**": true
+        }
 }
