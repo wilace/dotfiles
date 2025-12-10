@@ -31,11 +31,13 @@
         "--limit-results=500"
     ],
     "clangd.path": "/home/wilace/.config/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/21.1.0/clangd_21.1.0/bin/clangd",
-    "clangd.compilationDatabasePath": "build",
     "clangd.checkUpdates": true,
     "clangd.onConfigChanged": "restart",
     "editor.semanticHighlighting.enabled": true,
     "clang-format.detectStyle": false,
+    "files.associations": {
+        ".clang-tidy": "yaml"
+    },
     "$comment": "Inlay Hints（型ヒント）",
     "editor.inlayHints.enabled": "on",
     "editor.inlayHints.parameterNames.enabled": "literals",
@@ -63,8 +65,5 @@
         "**/build/**": true,
         "**/.cache/**": true,
         "**/out/**": true
-    },
-    "files.associations": {
-        ".clang-tidy": "yaml"
     }
 }
