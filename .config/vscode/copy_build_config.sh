@@ -12,8 +12,8 @@ fi
 
 cp -v "$(dirname "${0}")/tasks.json" "$(dirname "${0}")/launch.json" "${project_dir}/.vscode/"
 
-if [[ -f "../clang/copy_clang_config.sh" ]]; then
-  ../clang/copy_clang_config.sh "${project_dir}"
+if [[ -f "$(dirname "${0}")/../clang/copy_clang_config.sh" ]]; then
+  "$(dirname "${0}")/../clang/copy_clang_config.sh" "${project_dir}"
 fi
 
 unset project_dir
