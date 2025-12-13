@@ -65,5 +65,9 @@
         "**/build/**": true,
         "**/.cache/**": true,
         "**/out/**": true
+    },
+    "$comment": "シェルスクリプトのフォーマット設定",
+    "[shellscript]": {
+        "editor.tabSize": 2
     }
 }
